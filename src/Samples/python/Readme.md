@@ -15,4 +15,4 @@ Then, implement the client in a Python script. Replace the following placeholder
 
 ## Documentation
 
-Paho documentation can be accessed on following URL: [https://pypi.org/project/paho-mqtt/](link)
+Paho documentation can be accessed on following URL: [link](https://pypi.org/project/paho-mqtt/)

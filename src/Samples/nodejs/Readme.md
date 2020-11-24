@@ -15,5 +15,5 @@ Then, implement the client in a NodeJs script. Replace the following placeholder
 
 ## Documentation
 
-NodeJS Mqtt documentation can be accessed on following URL: [https://www.npmjs.com/package/mqtt](link)
+NodeJS Mqtt documentation can be accessed on following URL: [link](https://www.npmjs.com/package/mqtt)
 

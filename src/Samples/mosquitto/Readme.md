@@ -13,4 +13,4 @@ You can get new SAS token for your devices using DeviceOperations project locate
 
 ## Documentation
 
-Mosquitto documentation can be accessed on following URL: [https://mosquitto.org/](link)
+Mosquitto documentation can be accessed on following URL: [link](https://mosquitto.org/)
