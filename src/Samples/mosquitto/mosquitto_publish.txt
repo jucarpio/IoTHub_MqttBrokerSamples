@@ -1,0 +1,6 @@
+// Once Mosquitto is installed, the tool mosquitto_pub can be used from cmd line
+// mosquitto_pub command to publish to custom topics on IoT Hub
+// you need to generate SAS Token for the Hub and the device you look at
+
+mosquitto_pub -d -h <IotHubHostName> -p 8883 -i <DeviceId> -u "<IoTHubHostName>/<DeviceId>/api-version=2019-06-30" -P "<SasToken>" -t "<topic>" -m "<MessagePayload>" -V mqttv311 --cafile IoTHubRootCA_Baltimore.pem
+m  -q <0|1>
