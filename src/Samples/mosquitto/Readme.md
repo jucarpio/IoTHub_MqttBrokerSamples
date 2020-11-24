@@ -10,3 +10,7 @@ You can get new SAS token for your devices using DeviceOperations project locate
 | ------ | ------ | 
 | Publish message to a topic | [mosquitto_pub](https://mosquitto.org/man/mosquitto_pub-1.html) |
 | Subscribe to a topic |  [mosquitto_sub](https://mosquitto.org/man/mosquitto_sub-1.html) |
+
+## Documentation
+
+Mosquitto documentation can be accessed on following URL: [https://mosquitto.org/](link)

@@ -21,18 +21,6 @@ Below if the file contents of this repository.
 | src/BrokerSamples | Samples on how to perform mqtt broker operations on IoT Hub using different open source tools |
 | IoTHubRootCA_Baltimore.pem | Certificate used in these samples |
 
-### Samples
-
-Tools availables and instructions on how to use them in your own application are linked below.
-
-| Language | README |
-| ------ | ------ |
-| Dotnet | [src/BrokerSamples/dotnet/README.md][PlDb] |
-| Python | [src/BrokerSamples/python/README.md][PlDb] |
-| NodeJs | [src/BrokerSamples/nodejs/README.md][PlDb] |
-| Mosquitto | [src/BrokerSamples/mosquitto/README.md][PlDb] |
-
-
 # Azure IoT Hub MQTT broker preview
 ## Using MQTT broker with Azure IoT Hub
 In this set of samples we will show how to connect and use MQTT Broker on Azure IoT Hub preview as well as perform MQTT operations like: 
@@ -56,18 +44,7 @@ Below if the file contents of this repository.
 | src/BrokerSamples | Samples on how to perform mqtt broker operations on IoT Hub using different open source tools |
 | IoTHubRootCA_Baltimore.pem | Certificate used in these samples |
 
-### Samples
-
-Tools availables and instructions on how to use them in your own application are linked below.
-
-| Language | README |
-| ------ | ------ |
-| Dotnet | [src/BrokerSamples/dotnet/README.md][PlDb] |
-| Python | [src/BrokerSamples/python/README.md][PlDb] |
-| NodeJs | [src/BrokerSamples/nodejs/README.md][PlDb] |
-| Mosquitto | [src/BrokerSamples/mosquitto/README.md][PlDb] |
-
-### Instructions 
+### MQTT Broker instructions
 
 Every folder has different samples for each language or tool. However, there are some instructions that are generic for all tools that are required to use IoT Hub MQTT broker with any tool
 
@@ -75,6 +52,19 @@ Every folder has different samples for each language or tool. However, there are
 - For the **Username** field use `{iothubhostname}/{device_id}/?api-version=2018-06-30` where {iothubhostname} is the full CName of the IoT Hub
 - For the **Password** field, use a SAS token. The format of SAS token is `SharedAccessSignature sig={signature-string}&se={expiry}&sr={URL-encoded-resourceURI}`. Access tokens can be generated for devices using sample on src\DeviceOperations.
 - For **CA Certificate** use the IoTHubRootCA_Baltimore.pem located at the root of the repo.
+
+### Samples
+
+Tools availables and instructions on how to use them in your own application are linked below.
+
+| Language | README |
+| ------ | ------ |
+| Dotnet | [src/BrokerSamples/dotnet/README.md](src/BrokerSamples/dotnet/README.md) |
+| Python | [src/BrokerSamples/python/README.md](src/BrokerSamples/python/README.md) |
+| NodeJs | [src/BrokerSamples/nodejs/README.md](src/BrokerSamples/nodejs/README.md)|
+| Mosquitto | [src/BrokerSamples/mosquitto/README.md](src/BrokerSamples/mosquitto/README.md) |
+
+### Sample instructions
 
 For the samples following values need to be changed to make them work with your IoT Hub
 
@@ -85,7 +75,7 @@ For the samples following values need to be changed to make them work with your 
 
 ### MQTT Box  
 
-Different UI tools can be used to connect to IoT Hub mqtt broker and publish messages to topic as well as subscribe to different topics. One example is (Mqtt Box)[http://workswithweb.com/mqttbox.html]
+Different UI tools can be used to connect to IoT Hub mqtt broker and publish messages to topic as well as subscribe to different topics. One example is [Mqtt Box](http://workswithweb.com/mqttbox.html)
 
 
 

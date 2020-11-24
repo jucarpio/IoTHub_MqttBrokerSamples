@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,19 +10,43 @@ namespace CreateDevice
 {
     class Program
     {
-        static string IotHubConnectionString = "<iot hub conn string>";
-        static string IotHubHostName = "<iot hub hostname>";
-
         static async Task Main(string[] args)
         {
-            Console.WriteLine($"Get or create devices for IoT Hub {IotHubHostName}");
-            await GetOrCreateDevice("Device01");
-            await GetOrCreateDevice("Device02");
+            if (args.Length != 2)
+            {
+                throw new InvalidOperationException("ERROR: expected command input.\\GetOrCreateDevice.exe<IoTHubConnectionString> <IoTHubHostname> <NumberOfDevices> ");
+            }
+
+            string iotHubConnectionString = args[0];
+            int numberOfDevices = Int32.Parse(args[1]);
+            if (numberOfDevices < 0 || numberOfDevices > 1000)
+            {
+                throw new InvalidOperationException("ERROR: Device count must be between 0 and 1000");
+            }
+
+            Dictionary<string, string> dictionary = new Dictionary<string, string>();
+            string[] items = iotHubConnectionString.Split(';');
+            foreach (string item in items)
+            {
+                string[] keyValue = item.Split('=');
+                dictionary.Add(keyValue[0], keyValue[1]);
+            }
+            if (!dictionary.ContainsKey("HostName"))
+            {
+                throw new InvalidOperationException("ERROR: HostName is not present on IoT Hub connection string");
+            }
+
+            string iotHubHostName = dictionary["HostName"];
+
+            for (int i = 0; i < numberOfDevices; ++i)
+            {
+                await GetOrCreateDevice(iotHubConnectionString, iotHubHostName, $"Device-{i}");
+            }
         }
 
-        static async Task GetOrCreateDevice(string deviceId)
+        static async Task GetOrCreateDevice(string iotHubConnectionString, string iotHubHostName, string deviceId)
         {
-            RegistryManager registryManager = RegistryManager.CreateFromConnectionString(IotHubConnectionString);
+            RegistryManager registryManager = RegistryManager.CreateFromConnectionString(iotHubConnectionString);
 
             var device = await registryManager.GetDeviceAsync(deviceId);
             if (device != null)
@@ -30,7 +55,7 @@ namespace CreateDevice
                 {
                     Key = device.Authentication.SymmetricKey.PrimaryKey,
                     TimeToLive = TimeSpan.FromDays(1),
-                    Target = IotHubHostName + "/devices/" + WebUtility.UrlEncode(device.Id)
+                    Target = iotHubHostName + "/devices/" + WebUtility.UrlEncode(device.Id)
                 };
 
                 Console.WriteLine($"Device already exists\n. Device id: {deviceId}\n. SAS Token: {sasKeyBuilder.ToSignature()}");
@@ -55,7 +80,7 @@ namespace CreateDevice
             {
                 Key = device.Authentication.SymmetricKey.PrimaryKey,
                 TimeToLive = TimeSpan.FromDays(20),
-                Target = IotHubHostName + "/devices/" + WebUtility.UrlEncode(device.Id)
+                Target = iotHubHostName + "/devices/" + WebUtility.UrlEncode(device.Id)
             };
             Console.WriteLine($"Device created\n. Device id: {deviceId}\n. SAS Token: {builder.ToSignature()}");
         }

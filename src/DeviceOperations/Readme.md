@@ -6,14 +6,24 @@ For simplicity, we have provided a dot net project on this repository that allow
 
 ## Instructions
 
--	Go to src\DeviceOperations\DeviceOperations.sln solution and open Program.cs file. 
--	Change IoTHubConnectionString and IoTHubHostName for the values for your IoTHub
--	On the main function call:
-    
-    ```csharp
-    await GetOrCreateDevice("DeviceID"); 
-    ```
+We are providing an executable that can be found on:
 
-	For every device that you want to create 
+IoTHub_MqttBrokerSamples\src\DeviceOperations\DeviceOperations\CreateDevice\bin\Debug\netcoreapp3.1\GetOrCreateDevice.exe
 
--	The program will output a list of devices and their SAS keys that can be used to use the IoT Hub MQTT broker.
+The exe can be run from the console to create or retrieve a number of devices and their SAS key used to authenticate with the broker. To use it run following command
+
+```sh
+.\GetOrCreateDevice.exe "<IoT Hub Connection string>" <Number of devices>
+```
+
+Specified number of device will be created or retrieved if they already exist and displayed to the user alongside their connection string. 
+
+Output will look like following:
+
+Device already exists
+. Device id: Device-0
+. SAS Token: Token
+
+Device already exists
+. Device id: Device-1
+. SAS Token: Token

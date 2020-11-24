@@ -13,3 +13,7 @@ Then, implement the client in a NodeJs script. Replace the following placeholder
 - SasKey
 - Path_to_cert
 
+## Documentation
+
+NodeJS Mqtt documentation can be accessed on following URL: [https://www.npmjs.com/package/mqtt](link)
+

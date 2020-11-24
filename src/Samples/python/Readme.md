@@ -13,3 +13,6 @@ Then, implement the client in a Python script. Replace the following placeholder
 - SasKey
 - Path_to_cert
 
+## Documentation
+
+Paho documentation can be accessed on following URL: [https://pypi.org/project/paho-mqtt/](link)
