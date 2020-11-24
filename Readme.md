@@ -59,10 +59,10 @@ Tools availables and instructions on how to use them in your own application are
 
 | Language | README |
 | ------ | ------ |
-| Dotnet | [src/BrokerSamples/dotnet/README.md](src/BrokerSamples/dotnet/README.md) |
-| Python | [src/BrokerSamples/python/README.md](src/BrokerSamples/python/README.md) |
-| NodeJs | [src/BrokerSamples/nodejs/README.md](src/BrokerSamples/nodejs/README.md)|
-| Mosquitto | [src/BrokerSamples/mosquitto/README.md](src/BrokerSamples/mosquitto/README.md) |
+| Dotnet | [src/BrokerSamples/dotnet/README.md](src/Samples/dotnet/README.md) |
+| Python | [src/BrokerSamples/python/README.md](src/Samples/python/README.md) |
+| NodeJs | [src/BrokerSamples/nodejs/README.md](src/Samples/nodejs/README.md)|
+| Mosquitto | [src/BrokerSamples/mosquitto/README.md](src/Samples/mosquitto/README.md) |
 
 ### Sample instructions
 
