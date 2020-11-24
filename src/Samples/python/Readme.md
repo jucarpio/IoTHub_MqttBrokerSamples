@@ -8,8 +8,8 @@ pip install paho-mqtt
 
 Then, implement the client in a Python script. Replace the following placeholders with information for your IoT Hub and devices used to connect to the broker
 
-- <IotHubHostName>
-- <DeviceId>
-- <SasKey>
-- <Path_to_cert>
+- IotHubHostName
+- DeviceId
+- SasKey
+- Path_to_cert
 
