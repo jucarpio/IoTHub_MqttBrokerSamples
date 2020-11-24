@@ -9,16 +9,14 @@ namespace CreateDevice
 {
     class Program
     {
-        static string IotHubConnectionString = "HostName=free-preview-01.azure-devices-int.net;SharedAccessKeyName=iothubowner;SharedAccessKey=sufVRQzUqayAMo/rxjYogqMGjjYCxXXfy5yftnBRCj4=";
-        static string IotHubHostName = "free-preview-01.azure-devices-int.net";
+        static string IotHubConnectionString = "<iot hub conn string>";
+        static string IotHubHostName = "<iot hub hostname>";
 
         static async Task Main(string[] args)
         {
             Console.WriteLine($"Get or create devices for IoT Hub {IotHubHostName}");
             await GetOrCreateDevice("Device01");
             await GetOrCreateDevice("Device02");
-            //await GetOrCreateDevice("Paho-01");
-            //await GetOrCreateDevice("Mosquitto-01");
         }
 
         static async Task GetOrCreateDevice(string deviceId)
