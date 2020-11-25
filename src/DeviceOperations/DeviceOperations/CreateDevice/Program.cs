@@ -12,13 +12,14 @@ namespace CreateDevice
     {
         static async Task Main(string[] args)
         {
-            if (args.Length != 2)
+            if (args.Length != 3)
             {
-                throw new InvalidOperationException("ERROR: expected command input.\\GetOrCreateDevice.exe<IoTHubConnectionString> <IoTHubHostname> <NumberOfDevices> ");
+                throw new InvalidOperationException("ERROR: expected command input.\\GetOrCreateDevice.exe<IoTHubConnectionString> <IoTHubHostname> <NumberOfDevices> <alias>");
             }
 
             string iotHubConnectionString = args[0];
             int numberOfDevices = Int32.Parse(args[1]);
+            string alias = args[2];
             if (numberOfDevices < 0 || numberOfDevices > 1000)
             {
                 throw new InvalidOperationException("ERROR: Device count must be between 0 and 1000");
@@ -40,7 +41,7 @@ namespace CreateDevice
 
             for (int i = 0; i < numberOfDevices; ++i)
             {
-                await GetOrCreateDevice(iotHubConnectionString, iotHubHostName, $"Device-{i}");
+                await GetOrCreateDevice(iotHubConnectionString, iotHubHostName, $"{alias}-device-{i}");
             }
         }
 

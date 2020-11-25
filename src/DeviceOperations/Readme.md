@@ -13,7 +13,7 @@ We are providing an executable that can be found on:
 The exe can be run from the console to create or retrieve a number of devices and their SAS key used to authenticate with the broker. To use it run following command
 
 ```sh
-.\GetOrCreateDevice.exe "<IoT Hub Connection string>" <Number of devices>
+.\GetOrCreateDevice.exe "<IoT Hub Connection string>" <Number of devices> <alias>
 ```
 
 Specified number of device will be created or retrieved if they already exist and displayed to the user alongside their connection string. 
@@ -21,9 +21,9 @@ Specified number of device will be created or retrieved if they already exist an
 Output will look like following:
 
 > Device already exists
-> . Device id: Device-0
+> . Device id: alias-device-0
 > . SAS Token: Token
 
 > Device already exists
-> . Device id: Device-1
+> . Device id: alias-device-1
 > . SAS Token: Token
