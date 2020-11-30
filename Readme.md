@@ -17,8 +17,7 @@ Below if the file contents of this repository.
 
 | File/folder | Description |
 | ------ | ------ |
-| src/DeviceOperations | Dotnet solution with sample code on how to perform CRUD operation for devices and get SAS tokens for devices on private preview IoT Hub |
-| src/BrokerSamples | Samples on how to perform mqtt broker operations on IoT Hub using different open source tools |
+| src/Samples | Samples on how to perform mqtt broker operations on IoT Hub using different open source tools |
 | IoTHubRootCA_Baltimore.pem | Certificate used in these samples |
 
 # Azure IoT Hub MQTT broker preview
@@ -33,16 +32,6 @@ To be able to use MQTT broker in private preview, it is required to obtain an Io
 
 ### Installation
 This samples use different tools and oper source libraries, so every sample includes intructions on libraries and tools that are required
-
-### Contents
-
-Below if the file contents of this repository.
-
-| File/folder | Description |
-| ------ | ------ |
-| src/DeviceOperations | Dotnet solution with sample code on how to perform CRUD operation for devices and get SAS tokens for devices on private preview IoT Hub |
-| src/BrokerSamples | Samples on how to perform mqtt broker operations on IoT Hub using different open source tools |
-| IoTHubRootCA_Baltimore.pem | Certificate used in these samples |
 
 ### MQTT Broker instructions
 
